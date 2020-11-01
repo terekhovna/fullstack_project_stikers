@@ -1,0 +1,10 @@
+.style {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 8.40em;
+    
+    margin: 0.5em;
+}

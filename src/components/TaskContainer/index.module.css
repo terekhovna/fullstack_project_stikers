@@ -1,0 +1,18 @@
+.style {
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: left;
+    margin: 0.6em;
+    padding: 0.6em;
+
+    position: absolute;
+    width: 75em;
+    height: 47em;
+    left: 2.7em;
+    top: 4em;
+
+    background: #C1EFFE;
+    border-radius: 45px;
+}
