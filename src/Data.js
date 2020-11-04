@@ -4,15 +4,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 10, 12, 22, 7),
-    "hours_to_do": 5.7,
+    "workHours": 5.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -21,15 +21,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -38,15 +38,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -55,15 +55,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -72,15 +72,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },{
     "id": 49384,
@@ -88,15 +88,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 10, 12, 22, 7),
-    "hours_to_do": 5.7,
+    "workHours": 5.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -105,15 +105,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -122,15 +122,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -139,15 +139,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -156,15 +156,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -173,15 +173,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -190,15 +190,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },{
     "id": 49384,
@@ -206,15 +206,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 10, 12, 22, 7),
-    "hours_to_do": 5.7,
+    "workHours": 5.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -223,15 +223,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -240,15 +240,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -257,15 +257,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -274,15 +274,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -291,15 +291,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -308,15 +308,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },{
     "id": 49384,
@@ -324,15 +324,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 10, 12, 22, 7),
-    "hours_to_do": 5.7,
+    "workHours": 5.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -341,15 +341,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -358,15 +358,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   },
   {
@@ -375,15 +375,15 @@ const data = [{
     "items": [
       {
         "text": "1 лекция",
-        "is_done": true
+        "isDone": true
       },
       {
         "text": "2 лекция",
-        "is_done": false
+        "isDone": false
       }
     ],
     "deadline": new Date(2020, 12, 12, 2, 7),
-    "hours_to_do": 51.7,
+    "workHours": 51.7,
     "notes": "Нужно зайти на youtube и зайти на канал Лекторий ФПМИ"
   }]
 

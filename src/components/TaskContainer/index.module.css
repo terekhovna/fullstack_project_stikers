@@ -8,21 +8,20 @@
 
     position: absolute;
     width: 71vw;
-    height: 78.1vh;
+    height: 81.1vh;
     left: 3vw;
     top: 13.5vh;
 
     padding: 1vh 0;
     background: #C1EFFE;
-    border-radius: 6vmin 0 0 6vmin;
+    border-radius: 6vmin 1vmin 1vmin 6vmin;
 }
 
 .style::-webkit-scrollbar-track {
     border: 0.1px solid #000;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
     background-color: #AAEDF7;
     border-radius: 10vmin;
-    margin: 1vh 0;
 }
 
 .style::-webkit-scrollbar {

@@ -9,7 +9,7 @@ export default function TaskDisplay({data})
     const {description, 
         items,
         deadline,
-        hours_to_do
+        workHours
     } = data;
     return (
         <span className={styles.style}>
@@ -19,8 +19,8 @@ export default function TaskDisplay({data})
             <div className={styles.child_style}>
                 <DeadLineDisplay deadline={deadline}/>
                 <ItemNumber number_of_tasks={items.length}
-                    number_of_done_tasks={items.filter(item => item.is_done).length}/>
-                <WorkHours value={hours_to_do}/> 
+                    number_of_done_tasks={items.filter(item => item.isDone).length}/>
+                <WorkHours value={workHours}/> 
             </div>
         </span>
     );

@@ -22,7 +22,16 @@ function App() {
   return (
     <div className={styles.style}>
       <TaskContainer store={store}/>
-      {/* <TaskAdder/> */}
+      <TaskAdder store={store} initialData={{"items": [
+      {
+        "text": "1 лекция",
+        "isDone": true
+      },
+      {
+        "text": "2 лекция",
+        "isDone": false
+      }
+    ]}}/>
     </div>
     // <div className={styles.page}>
     //   <Clock />

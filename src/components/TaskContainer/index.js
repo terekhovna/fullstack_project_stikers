@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import TaskDisplay from '../TaskDisplay/index';
 import styles from './index.module.css'
 import TaskLineContainer from '../TaskLineContainer/index'
 
@@ -10,7 +9,7 @@ export default function TaskContainer({store}) {
     store.subscribe(() => {
       setData(store.getState());
     });
-  }, []);
+  }, [store]);
   let containers = [];
   const task_in_row = 4;
   for(let i = 0; i < data.length; i += task_in_row) {

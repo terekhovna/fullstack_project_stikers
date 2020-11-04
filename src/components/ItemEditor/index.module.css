@@ -1,0 +1,24 @@
+.style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.textarea {
+    flex-grow: 1;
+    overflow: auto;
+    height: 12vh;
+    resize: none;
+    font-size: 4.5vw;
+    background: #FFFFFF;
+    /* border: 1px solid #000000;
+    box-sizing: border-box; */
+    border-radius: 8vmin;
+    border: 0px;
+    margin: 1.5vh 0vmin 1.5vh 0;
+    padding: 0vh 1.5vw;
+    
+    zoom: 0.25;
+}
