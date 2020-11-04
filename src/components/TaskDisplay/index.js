@@ -18,9 +18,8 @@ export default function TaskDisplay({data})
             </div>
             <div className={styles.child_style}>
                 <DeadLineDisplay deadline={deadline}/>
-                <ItemNumber number_of_tasks={items.length}
-                    number_of_done_tasks={items.filter(item => item.isDone).length}/>
-                <WorkHours value={workHours}/> 
+                <ItemNumber items={items}/>
+                <WorkHours workHours={workHours}/>
             </div>
         </span>
     );

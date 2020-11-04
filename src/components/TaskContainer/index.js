@@ -5,7 +5,6 @@ import TaskLineContainer from '../TaskLineContainer/index'
 export default function TaskContainer({store}) {
   const [data, setData] = useState(store.getState());
   useEffect(() => {
-    console.log(store.getState());
     store.subscribe(() => {
       setData(store.getState());
     });

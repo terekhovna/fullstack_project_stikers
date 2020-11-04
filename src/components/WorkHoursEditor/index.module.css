@@ -1,0 +1,15 @@
+.style {
+    border: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8vmin;
+    height: 12vh;
+    margin: 8vh 0 4vh;
+    /* box-sizing: border-box; */
+    padding: 0.8vh 2vw;
+    width: 100%;
+    resize: none;
+
+    font-size: 4.5vw;
+    zoom: 0.25;
+}

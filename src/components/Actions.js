@@ -7,7 +7,7 @@ export function descriptionEdited(value) {
 
 export function itemIsDoneEdited(id, isDone) {
     return {
-        type: "itemDoneEdited",
+        type: "itemIsDoneEdited",
         id: id,
         isDone: isDone
     }
@@ -25,5 +25,39 @@ export function addItem(text) {
     return {
         type: "addItem",
         text: text
+    }
+}
+
+export function deadlineEdited(deadline) {
+    return {
+        type: "deadlineEdited",
+        deadline: deadline
+    }
+}
+
+export function workHoursEdited(workHours) {
+    return {
+        type: "workHoursEdited",
+        workHours: workHours
+    }
+}
+
+export function notesEdited(notes) {
+    return {
+        type: "notesEdited",
+        notes: notes
+    }
+}
+
+export function addTask(task) {
+    return {
+        type: "addTask",
+        task: task
+    }
+}
+
+export function clean() {
+    return {
+        type: "clean"
     }
 }

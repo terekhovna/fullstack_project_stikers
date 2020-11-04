@@ -7,6 +7,9 @@ function format_date(deadline) {
 }
 
 export default function DeadLineDisplay({deadline}) {
+    if(!(deadline instanceof Date)) {
+        return <span/>;
+    }
     return (
         <Widget style={styles.style}>
         {format_date(deadline)}

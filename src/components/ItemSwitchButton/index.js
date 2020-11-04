@@ -8,7 +8,8 @@ export default function ItemSwitchButton({id, store}) {
 
     return <input className={styles.style}
         type="checkbox"
-        onChange={(e) => {store.dispatch(itemIsDoneEdited(id, e.target.checked))}}
+        onChange={(e) => {
+            store.dispatch(itemIsDoneEdited(id, e.target.checked))}}
         value={item.isDone || false}
     />;
 }

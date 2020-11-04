@@ -1,49 +1,81 @@
 import React from 'react';
 import { createStore } from 'redux'
 import styles from './App.module.css';
-import Clock from './components/Clock'
-import WorkHours from './components/widgets/WorkHours/index'
-import ItemNumber from './components/widgets/ItemNumber/index'
-import DeadLineDisplay from './components/widgets/DeadLineDisplay/index'
-import TaskDisplay from './components/TaskDisplay/index'
 import TaskContainer from './components/TaskContainer';
 import TaskAdder from './components/TaskAdder';
 
 import data from './Data'
 
-const reducer = (state, action) => {
-  return state;
+function generateId(task) {
+    return 12;
 }
 
-const store = createStore(reducer, data.slice(0, 29))
+function processDeadline(deadline) {
+    deadline = deadline || "";
+    deadline = deadline.trim()
+    if(deadline.match(/^([0-9]+).([0-9]+).([0-9]+) ([0-9]+):([0-9]+)$/)) {
+        deadline = deadline.replace(/^([0-9]+).([0-9]+).([0-9]+) ([0-9]+):([0-9]+)$/, "$3-$2-$1 $4:$5")
+    }
+    else if(deadline.match(/^([0-9]+).([0-9]+) ([0-9]+):([0-9]+)$/)) {
+        deadline = deadline.replace(/^([0-9]+).([0-9]+) ([0-9]+):([0-9]+)$/,
+            (new Date()).getFullYear().toString() + "-$2-$1 $3:$4")
+    }
+    else if(deadline.match(/^([0-9]+).([0-9]+)$/)) {
+        deadline = deadline.replace(/^([0-9]+).([0-9]+)$/,
+            (new Date()).getFullYear().toString() + "-$2-$1")
+    }
+    else if(deadline.match(/^([0-9]+).([0-9]+).([0-9]+)$/)) {
+        deadline = deadline.replace(/^([0-9]+).([0-9]+).([0-9]+)$/, "$3-$2-$1")
+    }
+    else {
+        return null;
+    }
+    return new Date(deadline);
+}
 
+function processItems(items) {
+    items = items || [];
+    return items.map((item) => {return {
+        text: item.text.trim(),
+        isDone: item.isDone
+    }}).filter((item) => item.text.length);
+}
+
+function processWorkHours(workHours) {
+    return parseFloat(workHours);
+}
+
+function processTask(task) {
+    task.description = task.description || "";
+    task.items = processItems(task.items);
+    task.deadline = processDeadline(task.deadline);
+    task.id = generateId(task);
+    task.workHours = processWorkHours(task.workHours);
+    return task;
+}
+
+const reducer = (state, action) => {
+  switch(action.type) {
+      case 'addTask': {
+          let task = processTask(action.task);
+          console.log(task)
+          return [
+              ...state,
+              task
+          ]
+      }
+      default: return state;
+  }
+}
+
+const store = createStore(reducer, data.slice(0, 17))
 
 function App() {
   return (
     <div className={styles.style}>
       <TaskContainer store={store}/>
-      <TaskAdder store={store} initialData={{"items": [
-      {
-        "text": "1 лекция",
-        "isDone": true
-      },
-      {
-        "text": "2 лекция",
-        "isDone": false
-      }
-    ]}}/>
+      <TaskAdder store={store}/>
     </div>
-    // <div className={styles.page}>
-    //   <Clock />
-    //   <div>
-    //     <WorkHours value={5.5}/>{" "}<ItemNumber number_of_tasks={77} number_of_done_tasks={100}/>
-    //     {" "} <DeadLineDisplay deadline={new Date()} />
-    //   </div>
-    //   <div>
-    //     <TaskDisplay data={data[0]}/>
-    //     <TaskDisplay data={data[1]}/>
-    //   </div>
-    // </div>
   );
 }
 

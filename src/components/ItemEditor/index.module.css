@@ -16,9 +16,9 @@
     /* border: 1px solid #000000;
     box-sizing: border-box; */
     border-radius: 8vmin;
-    border: 0px;
-    margin: 1.5vh 0vmin 1.5vh 0;
-    padding: 0vh 1.5vw;
+    border: 0;
+    margin: 1.5vh 0 1.5vh 0;
+    padding: 0 1.5vw;
     
     zoom: 0.25;
 }

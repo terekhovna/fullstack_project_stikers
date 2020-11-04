@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './index.module.css'
-import {itemEdited, addItem} from '../Actions'
 import ItemEditor from '../ItemEditor'
 import AddItem from '../AddItem'
 
@@ -16,7 +15,9 @@ export default function ItemsEditor({store}) {
     }
 
     return <div className={styles.style}>
-        {itemEditors}
+        <div className={styles.item_list}>
+            {itemEditors}
+        </div>
         <AddItem store={store}/>
     </div>;
 }

@@ -8,10 +8,13 @@ function hoursToTime(hours) {
     return String(hours) + " часов"
 }
 
-export default function WorkHours({value}) {
+export default function WorkHours({workHours}) {
+    if(isNaN(workHours)) {
+        return <span/>;
+    }
     return (
         <Widget style={styles.style}>
-            {hoursToTime(value)}
+            {hoursToTime(workHours)}
         </Widget>
     );
 }
