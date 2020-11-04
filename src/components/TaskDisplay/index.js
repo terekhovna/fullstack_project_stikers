@@ -1,7 +1,7 @@
 import React from 'react'
-import DeadLineDisplay from '../DeadLineDisplay'
-import ItemNumber from '../ItemNumber'
-import WorkHours from '../WorkHours'
+import DeadLineDisplay from '../widgets/DeadLineDisplay'
+import ItemNumber from '../widgets/ItemNumber'
+import WorkHours from '../widgets/WorkHours'
 import styles from './index.module.css'
 
 export default function TaskDisplay({data})
@@ -13,7 +13,9 @@ export default function TaskDisplay({data})
     } = data;
     return (
         <span className={styles.style}>
-            <p className={styles.text}>{description}</p>
+            <div className={styles.around_text}>
+                <div className={styles.text}>{description}</div>
+            </div>
             <div className={styles.child_style}>
                 <DeadLineDisplay deadline={deadline}/>
                 <ItemNumber number_of_tasks={items.length}

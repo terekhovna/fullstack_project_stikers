@@ -1,0 +1,16 @@
+.style {
+    border-radius: 4vmin;
+    padding: 0.2vh 0.6vw;
+    margin: 0.2vmin;
+    height: 2vmin;
+}
+
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-size: 7vmin;
+    white-space: nowrap;
+    zoom: 0.25;
+}

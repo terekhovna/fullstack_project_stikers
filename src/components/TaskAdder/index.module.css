@@ -1,0 +1,19 @@
+.style {
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: left;
+    padding: 0.6em;
+
+    position: absolute;
+    width: 24em;
+    height: 50.5em;
+    left: 80.5em;
+    top: 3em;
+
+    background: #F5F5F5;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 46px;
+}

@@ -1,5 +1,4 @@
 .page {
-
   position: absolute;
   /* width: 300px; */
   /* height: 200px; */
@@ -12,4 +11,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between; */
+}
+
+.style {
+  -webkit-text-size-adjust: none;
 }

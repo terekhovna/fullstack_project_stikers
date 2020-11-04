@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './index.module.css'
+import Widget from '../Widget'
 
 function hours_to_time(hours) {
     hours = parseFloat(hours)
@@ -9,8 +10,8 @@ function hours_to_time(hours) {
 
 export default function WorkHours({value}) {
     return (
-        <span className={styles.work_hours}>
+        <Widget style={styles.style}>
             {hours_to_time(value)}
-        </span>
+        </Widget>
     );
 }

@@ -2,11 +2,12 @@ import React from 'react';
 import { createStore } from 'redux'
 import styles from './App.module.css';
 import Clock from './components/Clock'
-import WorkHours from './components/WorkHours/index'
-import ItemNumber from './components/ItemNumber/index'
-import DeadLineDisplay from './components/DeadLineDisplay/index'
+import WorkHours from './components/widgets/WorkHours/index'
+import ItemNumber from './components/widgets/ItemNumber/index'
+import DeadLineDisplay from './components/widgets/DeadLineDisplay/index'
 import TaskDisplay from './components/TaskDisplay/index'
 import TaskContainer from './components/TaskContainer';
+import TaskAdder from './components/TaskAdder';
 
 import data from './Data'
 
@@ -14,13 +15,14 @@ const reducer = (state, action) => {
   return state;
 }
 
-const store = createStore(reducer, data.slice(0, 17))
+const store = createStore(reducer, data.slice(0, 29))
 
 
 function App() {
   return (
-    <div>
+    <div className={styles.style}>
       <TaskContainer store={store}/>
+      {/* <TaskAdder/> */}
     </div>
     // <div className={styles.page}>
     //   <Clock />
