@@ -5,9 +5,14 @@ import TaskContainer from './components/TaskContainer';
 import TaskAdder from './components/TaskAdder';
 
 import data from './Data'
+import TabContainer from "./components/TabContainer";
 
-function generateId(task) {
-    return 12;
+function generateTabId(title) {
+    return new Date().getTime();
+}
+
+function generateTaskId(task) {
+    return new Date().getTime(); //TODO norm id generation
 }
 
 function processDeadline(deadline) {
@@ -41,6 +46,11 @@ function processItems(items) {
     }}).filter((item) => item.text.length);
 }
 
+// function processActiveTabId(store, id) {
+//     id = ParseInt(id)
+//     const index = state.tabs.findIndex((tab) => (tab.tabId === state.activeTabId));
+// }
+
 function processWorkHours(workHours) {
     return parseFloat(workHours);
 }
@@ -49,7 +59,7 @@ function processTask(task) {
     task.description = task.description || "";
     task.items = processItems(task.items);
     task.deadline = processDeadline(task.deadline);
-    task.id = generateId(task);
+    task.id = generateTaskId(task);
     task.workHours = processWorkHours(task.workHours);
     return task;
 }
@@ -58,21 +68,53 @@ const reducer = (state, action) => {
   switch(action.type) {
       case 'addTask': {
           let task = processTask(action.task);
-          console.log(task)
-          return [
+          if(isNaN(state.activeTabId)) {
+              alert("create Tab first");
+              return state;
+          }
+          let tabs = [...state.tabs];
+          const index = tabs.findIndex((tab) => (tab.id === state.activeTabId));
+          tabs[index] = {
+              ...tabs[index],
+              tasks: [
+                  ...tabs[index].tasks,
+                  task
+              ]
+          }
+          return {
               ...state,
-              task
-          ]
+              tabs: tabs
+          }
+      }
+      case 'addTab': {
+          return {
+              ...state,
+              tabs: [
+                  ...state.tabs,
+                  {
+                      id: generateTabId(action.title),
+                      title: action.title,
+                      tasks: []
+                  }
+              ]
+          }
+      }
+      case 'changeActiveTab' : {
+          return {
+              ...state,
+              activeTabId: action.id
+          }
       }
       default: return state;
   }
 }
 
-const store = createStore(reducer, data.slice(0, 17))
+const store = createStore(reducer, data)
 
 function App() {
   return (
     <div className={styles.style}>
+      <TabContainer store={store}/>
       <TaskContainer store={store}/>
       <TaskAdder store={store}/>
     </div>

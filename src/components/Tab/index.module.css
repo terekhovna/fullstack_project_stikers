@@ -1,0 +1,19 @@
+.active {
+    background: #C1EFFE;
+    border-radius: 3vmin 3vmin 0px 0px;
+    height: 100%;
+    margin: 3vh 1vw 0;
+    padding: 0 1vw;
+    font-size: 4vmin;
+    white-space: nowrap;
+}
+
+.disabled {
+    white-space: nowrap;
+    max-height: 80%;
+    margin: 0vh 0.5vw 0;
+    padding: 0 1vw;
+    background: #ACD0DB;
+    font-size: 3vmin;
+    border-radius: 3vmin;
+}

@@ -1,0 +1,39 @@
+.style {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    top: 5vh;
+    left: 6vw;
+    height: 8.5vh;
+    align-items: center;
+}
+
+.tablist {
+    height: 100%;
+    overflow: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 64vw;
+    margin-right: 1vw;
+}
+
+.tablist::-webkit-scrollbar-track {
+    border: 0.1px solid #000;
+    background-color: #AAEDF7;
+    border-radius: 10vmin;
+}
+
+.tablist::-webkit-scrollbar {
+    height: 1vh;
+}
+
+.tablist::-webkit-scrollbar-thumb {
+    border-radius: 2.5vmin;
+    box-shadow: inset 0 0 0.5vmin rgba(0,0,0,.3);
+    background-color: #08dceb;
+    border: 0.1px solid #000;
+}

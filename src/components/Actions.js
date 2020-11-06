@@ -61,3 +61,17 @@ export function clean() {
         type: "clean"
     }
 }
+
+export function addTab(title) {
+    return {
+        type: "addTab",
+        title: title
+    }
+}
+
+export function changeActiveTab(id) {
+    return {
+        type: "changeActiveTab",
+        id: id
+    }
+}

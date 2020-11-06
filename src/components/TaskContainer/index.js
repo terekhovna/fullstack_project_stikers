@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react';
 import styles from './index.module.css'
 import TaskLineContainer from '../TaskLineContainer/index'
 
+function getTasks(store) {
+  const activeTabId = store.getState().activeTabId;
+  const index = store.getState().tabs.findIndex((tab) => (tab.id === activeTabId));
+  return store.getState().tabs[index].tasks;
+}
+
 export default function TaskContainer({store}) {
-  const [data, setData] = useState(store.getState());
+  const [data, setData] = useState(getTasks(store));
   useEffect(() => {
     store.subscribe(() => {
-      setData(store.getState());
+      setData(getTasks(store));
     });
   }, [store]);
   let containers = [];
