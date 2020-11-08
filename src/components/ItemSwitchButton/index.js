@@ -10,6 +10,6 @@ export default function ItemSwitchButton({id, store}) {
         type="checkbox"
         onChange={(e) => {
             store.dispatch(itemIsDoneEdited(id, e.target.checked))}}
-        value={item.isDone || false}
+        checked={item.isDone}
     />;
 }

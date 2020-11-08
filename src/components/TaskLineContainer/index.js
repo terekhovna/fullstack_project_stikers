@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 export default function TaskLineContainer({data}) {
     let Tasks = data.map((datum) => 
-      <TaskDisplay data={datum}/>
+      <TaskDisplay key={datum.id} data={datum}/>
     )
     return <span className={styles.style}>
       {Tasks}

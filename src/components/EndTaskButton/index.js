@@ -1,10 +1,10 @@
 import React from "react";
 import styles  from './index.module.css'
 
-export default function AddTaskButton({onClick}) {
+export default function EndTaskButton({onClick}) {
     return (<div
         className={styles.style}
         onClick={onClick}>
-        Добавить Задачу
+        Завершить задачу
     </div>);
 }

@@ -8,6 +8,7 @@
     /* box-sizing: border-box; */
     padding: 0.8vh 2vw;
     width: 100%;
+    resize: vertical;
     
     font-size: 4.5vw;
     zoom: 0.25;

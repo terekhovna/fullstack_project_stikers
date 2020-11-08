@@ -75,3 +75,18 @@ export function changeActiveTab(id) {
         id: id
     }
 }
+
+export function deleteTask(id) {
+    return {
+        type: "deleteTask",
+        id: id
+    }
+}
+
+export function taskEdited(id, task) {
+    return {
+        type: "taskEdited",
+        id: id,
+        task: task
+    }
+}

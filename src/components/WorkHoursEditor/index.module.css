@@ -13,3 +13,7 @@
     font-size: 4.5vw;
     zoom: 0.25;
 }
+
+.error {
+    color: red;
+}

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './index.module.css'
 import classNames from "classnames";
-import {changeActiveTab} from '../Actions' // TODO rename
+import {changeActiveTab} from '../Actions'
+import StoreContext from "../../storeContext"; // TODO rename
 
-export default function Tab({store, id, title, isActive}) {
+export default function Tab({id, title, isActive}) {
+    const store = useContext(StoreContext);
     return <div
             className={classNames({
                 [styles.disabled]: !isActive,

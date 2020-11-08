@@ -9,6 +9,7 @@ export default function ItemsEditor({store}) {
     let itemEditors = [];
     for(let i = 0; i < items.length; ++i) {
         itemEditors.push(<ItemEditor 
+            key={i}
             id={i}
             store={store}
         />);

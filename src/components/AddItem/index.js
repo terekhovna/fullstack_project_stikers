@@ -12,6 +12,7 @@ export default function AddItem({store}) {
         placeholder="добавить пункт"
         className={styles.textarea}
         value={value}
+        onChange={(e)=>{}}
         onKeyPress={(e) => {
             if(e.key === 'Enter') {
                 store.dispatch(addItem(e.target.value));

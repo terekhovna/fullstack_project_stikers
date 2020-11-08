@@ -18,3 +18,9 @@
     border-radius: 6vmin;
     z-index: -1;
 }
+
+.title {
+    font-size: 5.2vw;
+    margin-top: 1.2vh;
+    zoom: 0.25;
+}
