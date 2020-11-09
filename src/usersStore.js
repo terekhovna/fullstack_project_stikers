@@ -127,6 +127,18 @@ function reducer(state, action) {
             alert(`Ваши данные\nlogin: ${user.login}\nemail: ${user.email}\npassword ${user.password}`)
             return state;
         }
+        case "updateUserData": {
+            const index = getUserIndex(state, action.userId);
+            let users = [...state.users];
+            users[index] = {
+                ...users[index],
+                data: action.data
+            }
+            return {
+                ...state,
+                users: users
+            }
+        }
         default: return state;
     }
 }

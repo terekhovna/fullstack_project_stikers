@@ -25,3 +25,11 @@ export function restoreData(loginData) {
         loginData: loginData
     }
 }
+
+export function updateUserData(userId, data) {
+    return {
+        type: "updateUserData",
+        userId,
+        data
+    }
+}
