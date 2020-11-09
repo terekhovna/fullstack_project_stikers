@@ -1,0 +1,19 @@
+.style {
+    border-radius: 5vmin;
+    user-select: none;
+    position:absolute;
+
+    left: 70vw;
+    top: 40vh;
+    /*height: 10vh;*/
+    background: #11D4EF;
+    padding: 2.5vh 2vw;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 2vw;
+}

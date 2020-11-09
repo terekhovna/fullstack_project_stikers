@@ -1,0 +1,19 @@
+.style {
+    border: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8vmin;
+    height: 20vh;
+    margin: 4vh 0 2vh;
+    /* box-sizing: border-box; */
+    padding: 0.8vh 2vw;
+    width: 100%;
+    resize: none;
+
+    font-size: 7vw;
+    zoom: 0.25;
+}
+
+.error {
+    color: red;
+}

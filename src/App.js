@@ -1,32 +1,24 @@
-import React, {useState} from 'react';
-import styles from './App.module.css';
-import TaskContainer from './components/TaskContainer';
-import TaskAdder from './components/TaskAdder';
-
-import TabContainer from "./components/TabContainer";
-import {EditProvider} from "./editContext";
-import {createEditedTaskStore} from "./editedTaskStore";
-import {StoreProvider} from "./storeContext";
-
-import data from './Data'
-import createMainStore from "./mainStore";
-import TaskEditor from "./components/TaskEditor";
+import React, {useEffect, useState} from 'react';
+import data from './usersData'
+import createUsersStore from "./usersStore";
+import {UsersStoreProvider} from "./usersStoreContext"
+import TasksPage from "./components/TasksPage";
+import LoginPage from "./components/LoginPage";
 
 function App() {
-    const editedTaskStore = useState(createEditedTaskStore())[0];
-    const store = useState(createMainStore(data))[0];
-    const [editedTaskId, updateEditedTaskId] = useState(null);
+    const usersStore = useState(createUsersStore(data))[0];
+    const [currentUserId, updateCurrentUserId] = useState(usersStore.getState().currentUserId);
+
+    useEffect(()=>{
+        return usersStore.subscribe(()=>{
+            updateCurrentUserId(usersStore.getState().currentUserId);
+        })
+    }, [usersStore]);
+
     return (
-        <div className={styles.style}>
-            <StoreProvider value={store}>
-            <EditProvider value={{editedTaskId, updateEditedTaskId}}>
-                <TabContainer/>
-                <TaskContainer/>
-                {editedTaskId?<TaskEditor/>:
-                    <TaskAdder editedTaskStore={editedTaskStore}/>}
-            </EditProvider>
-            </StoreProvider>
-        </div>
+        <UsersStoreProvider value={usersStore}>
+            {currentUserId===null?<LoginPage/>:<TasksPage/>}
+        </UsersStoreProvider>
     );
 }
 

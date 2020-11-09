@@ -1,0 +1,15 @@
+.style {
+    border-radius: 5vmin;
+    user-select: none;
+    position:absolute;
+
+    left: 70.6vw;
+    top: 51vh;
+    background: #FFF967;
+    padding: 1.5vh 2vw;
+    margin: auto 0 2vh;
+}
+
+.text {
+    font-size: 6vw;
+}

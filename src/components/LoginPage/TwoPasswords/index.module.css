@@ -1,0 +1,13 @@
+.style {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: auto;
+}
+
+.text {
+    text-align: left;
+    padding-left: 2vw;
+    font-size: 7vw;
+    zoom: 0.25;
+}

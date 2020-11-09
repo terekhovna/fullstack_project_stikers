@@ -1,0 +1,14 @@
+.style {
+    border-radius: 5vmin;
+    user-select: none;
+}
+
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    zoom: 0.25;
+}

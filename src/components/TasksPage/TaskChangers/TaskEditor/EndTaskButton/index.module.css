@@ -1,0 +1,11 @@
+.style {
+    background: #FFAFAF;
+    padding: 1vh 1vw;
+    margin: auto 0 2vh 1vw;
+}
+
+.text {
+    font-size: 6vw;
+    white-space: normal;
+    line-height: 13vh;
+}
