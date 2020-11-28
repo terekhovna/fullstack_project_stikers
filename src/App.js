@@ -1,25 +1,27 @@
 import React, {useEffect, useState} from 'react';
-import data from './usersData'
 import createUsersStore from "./usersStore";
 import {UsersStoreProvider} from "./usersStoreContext"
 import TasksPage from "./components/TasksPage";
 import LoginPage from "./components/LoginPage";
+import { withCookies } from 'react-cookie';
 
-function App() {
-    const usersStore = useState(createUsersStore(data))[0];
-    const [currentUserId, updateCurrentUserId] = useState(usersStore.getState().currentUserId);
+function App({cookies}) {
+    // console.log(cookies.get('user_id'))
+    // const usersStore = useState(createUsersStore(parseInt(cookies.get('user_id')) || null))[0];
+    const usersStore = useState(createUsersStore())[0];
+    const [currentUser, updateCurrentUser] = useState(usersStore.getState());
 
+    console.log(currentUser.id);
     useEffect(()=>{
         return usersStore.subscribe(()=>{
-            updateCurrentUserId(usersStore.getState().currentUserId);
+            updateCurrentUser(usersStore.getState());
         })
     }, [usersStore]);
-
     return (
         <UsersStoreProvider value={usersStore}>
-            {currentUserId===null?<LoginPage/>:<TasksPage/>}
+            {!currentUser.id?<LoginPage/>:<TasksPage/>}
         </UsersStoreProvider>
     );
 }
 
-export default App;
+export default withCookies(App);

@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import {deadlineToString, workHoursToString} from "../DataParserAndValidator";
+import {workHoursToString} from "../DataParserAndValidator";
 
 function reducer(state, action) {
     switch(action.type) {
@@ -73,7 +73,8 @@ function getState(task) {
     return {
         ...task,
         workHours: workHoursToString(task.workHours),
-        deadline: deadlineToString(task.deadline)
+        deadline: task.deadline,
+        items: task.items
     };
 }
 

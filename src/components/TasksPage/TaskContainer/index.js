@@ -3,7 +3,7 @@ import styles from './index.module.css'
 import TaskLineContainer from './TaskLineContainer'
 import DataStoreContext from "../dataStoreContext";
 
-function getTasks(store) {
+function getTasks(store) { //TODO change
   const activeTabId = store.getState().activeTabId;
   const index = store.getState().tabs.findIndex((tab) => (tab.id === activeTabId));
   return index === -1?[]:store.getState().tabs[index].tasks;

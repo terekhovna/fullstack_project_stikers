@@ -435,7 +435,7 @@ const data2 = {
 }
 
 const usersData = {
-  "currentUserId": null,
+  "currentUserId": 2,
   users: [
     {
       id: 1,
