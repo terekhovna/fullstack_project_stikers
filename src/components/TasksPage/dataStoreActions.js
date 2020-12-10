@@ -22,7 +22,6 @@ function processWorkHours(workHours) {
 }
 
 function processTask(task) {
-    console.log(task);
     task.description = task.description || "";
     task.items = JSON.stringify(processItems(task.items));
     task.id = null;

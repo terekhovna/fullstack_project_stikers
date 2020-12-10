@@ -14,7 +14,7 @@ export default function AddTabButton({store}) {
             placeholder="название"
             className={styles.textarea}
             value={value}
-            onChange={e => {}}
+            onChange={e => {updateValue(e.value)}}
             onKeyUp={(e) => {
                 if(e.key === "Enter") {
                     store.dispatch(addTab(e.target.value));

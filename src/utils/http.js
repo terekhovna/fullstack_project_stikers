@@ -1,4 +1,4 @@
-export default function http(path, method, body={}) {
+export default function http(path, method, body={}, cors=true) {
     return fetch('http://localhost:8080/api/' + path, {
         method: method,
         body: Object.keys(body).length === 0 ? null : JSON.stringify(body),
@@ -6,7 +6,8 @@ export default function http(path, method, body={}) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        credentials: "include"
+        credentials: "include",
+        mode: cors ? "cors" : "no-cors"
     }).then((response) => {
         let jsonPromise = response.json();
 

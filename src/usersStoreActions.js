@@ -10,18 +10,17 @@ export function changeUser(user) {
 
 export function logout(id) {
     return (dispatch) => {
-        http("logout", "post")
+        http("logout", "post", {}, false)
             .then((json) => {dispatch(changeUser({id: null}))})
-            .catch((json) => alert(json.error))
+            .catch((json) => {dispatch(changeUser({id: null}))})
+            // .catch((json) => alert(json.error))
     }
 }
 
 export function userSignIn(loginData) {
     return (dispatch) => {
-        http("sign_in", "post", {login: loginData.loginInPair||null,
-            email: loginData.emailInPair||null,
-            password: loginData.password})
-            .then((json) => {dispatch(changeUser(json))})
+        http(`perform_login?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`, "post")
+            .then((json) => {dispatch(loadUser())})
             .catch((json) => alert(json.error))
     }
 }
@@ -57,7 +56,7 @@ export function userSignUp(loginData) {
     }
     return (dispatch) => {
         http("sign_up", "post",
-            {login: loginData.login, email: loginData.email, password: loginData.password1})
+            {login: loginData.login, email: loginData.email, password: loginData.password1}) //TODO
             .then((json) => {dispatch(changeUser(json))})
             .catch((json) => alert(json.error))
     }
@@ -65,7 +64,7 @@ export function userSignUp(loginData) {
 
 export function loadUser() {
     return (dispatch) => {
-        http("user", "get")
+        http("user", "post")
             .then((user) => {dispatch(changeUser(user))})
             .catch((json) => {})
             // .catch((json) => alert(json.error))
@@ -74,7 +73,6 @@ export function loadUser() {
 
 export function restoreData(loginData) {
     return (dispatch) => {
-        console.log(loginData)
         http("restore_data", "post",
             {login: loginData.loginInPair || null, email: loginData.emailInPair || null})
             .then((user) =>

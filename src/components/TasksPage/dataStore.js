@@ -14,7 +14,6 @@ function getTaskById(state, id) {
 const reducer = (state, action) => {
     switch(action.type) {
         case 'update': {
-            console.log(action.data);
             return {
                 ...action.data
             };
