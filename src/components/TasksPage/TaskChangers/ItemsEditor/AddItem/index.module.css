@@ -14,7 +14,7 @@
     margin-right: 4vw;
     padding: 0 0 4vh 0.5vw;
     zoom: 0.25;
-
+    user-select: none;
 }
 
 .textarea {

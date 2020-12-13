@@ -6,6 +6,7 @@
     padding: 0 1vw;
     font-size: 4vmin;
     white-space: nowrap;
+    user-select: none;
 }
 
 .disabled {
@@ -16,4 +17,5 @@
     background: #ACD0DB;
     font-size: 3vmin;
     border-radius: 3vmin;
+    user-select: none;
 }

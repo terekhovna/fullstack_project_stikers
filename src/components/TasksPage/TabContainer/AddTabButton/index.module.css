@@ -4,6 +4,7 @@
     font-size: 2vw;
     width: 3vw;
     border-radius: 50%;
+    user-select: none;
 }
 
 .textarea {
