@@ -1,5 +1,5 @@
 export default function http(path, method, body={}, cors=true) {
-    return fetch('http://178.154.235.120:8080/api/' + path, {
+    return fetch('http://stickerstodo.mooo.com:8080/api/' + path, {
         method: method,
         body: Object.keys(body).length === 0 ? null : JSON.stringify(body),
         headers: {
