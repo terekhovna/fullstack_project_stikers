@@ -23,7 +23,8 @@ export default function TaskDisplay({data})
     } = data;
     return (
         <div className={styles.style}
-             onMouseEnter={(e)=>{changeInFocus(true)}}
+            onMouseOver={(e)=>{changeInFocus(true)}}
+            // onMouseEnter={(e)=>{changeInFocus(true)}}
             onMouseLeave={(e)=>{changeInFocus(false)}}>
             <div className={styles.around_text}>
                 <div className={styles.text}>{description}</div>
