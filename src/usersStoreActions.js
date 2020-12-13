@@ -17,6 +17,14 @@ export function logout(id) {
     }
 }
 
+export function userLoginAfterSignUp(userData) {
+    return (dispatch) => {
+        http(`perform_login?username=${userData.id}&password=${userData.password}`, "post")
+            .then((json) => {dispatch(loadUser())})
+            .catch((json) => alert(json.error))
+    }
+}
+
 export function userSignIn(loginData) {
     return (dispatch) => {
         http(`perform_login?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`, "post")
@@ -57,7 +65,7 @@ export function userSignUp(loginData) {
     return (dispatch) => {
         http("sign_up", "post",
             {login: loginData.login, email: loginData.email, password: loginData.password1}) //TODO
-            .then((json) => {dispatch(changeUser(json))})
+            .then((json) => {dispatch(userLoginAfterSignUp(json))})
             .catch((json) => alert(json.error))
     }
 }
