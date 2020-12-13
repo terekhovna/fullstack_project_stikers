@@ -8,7 +8,9 @@
     /*height: 10vh;*/
     background: #11D4EF;
     padding: 2.5vh 5vw;
+}
 
+.text {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /*font-style: normal;*/
     /*font-weight: normal;*/
