@@ -10,7 +10,7 @@ export function changeUser(user) {
 
 export function logout(id) {
     return (dispatch) => {
-        http("logout", "post", {}, false)
+        http("logout", "post", {}, true)
             .then((json) => {dispatch(changeUser({id: null}))})
             .catch((json) => {dispatch(changeUser({id: null}))})
             // .catch((json) => alert(json.error))
@@ -19,7 +19,7 @@ export function logout(id) {
 
 export function userLoginAfterSignUp(userData) {
     return (dispatch) => {
-        http(`perform_login?username=${userData.id}&password=${userData.password}`, "post")
+        http(`sign_in?username=${userData.id}&password=${userData.password}`, "post")
             .then((json) => {dispatch(loadUser())})
             .catch((json) => alert(json.error))
     }
@@ -27,7 +27,7 @@ export function userLoginAfterSignUp(userData) {
 
 export function userSignIn(loginData) {
     return (dispatch) => {
-        http(`perform_login?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`, "post")
+        http(`sign_in?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`, "post")
             .then((json) => {dispatch(loadUser())})
             .catch((json) => alert(json.error))
     }
@@ -79,12 +79,14 @@ export function loadUser() {
     }
 }
 
-export function restoreData(loginData) {
+export function restoreData(loginData, onSuccess) {
     return (dispatch) => {
         http("restore_data", "post",
             {login: loginData.loginInPair || null, email: loginData.emailInPair || null})
-            .then((user) =>
-                {alert(`Ваши данные\nlogin: ${user.login}\nemail: ${user.email}\npassword ${user.password}`)})
+            .then((user) => {
+                    alert(`Ваши данные\nlogin: ${user.login}\nemail: ${user.email}\npassword ${user.password}`);
+                    onSuccess();
+                })
             .catch((json) => alert(json.error))
     }
 }

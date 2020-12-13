@@ -30,8 +30,7 @@ export default function ForgotDataPage({updatePage}) {
                     </LoginingUserStoreProvider>
                 </div>
                 <RestoreDataButton onClick={(e) => {
-                    store.dispatch(restoreData(loginDataStore.getState()));
-                    updatePage("sign in");
+                    store.dispatch(restoreData(loginDataStore.getState(), () => updatePage("sign in")));
                 }}/>
             </div>
             <SignInButton onClick={(e) => {
