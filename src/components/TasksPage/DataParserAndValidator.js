@@ -36,7 +36,7 @@ export function deadlineToString(deadline) {
     }
 }
 
-export function parseDeadline(deadline) {
+export function parseDeadline(deadline) { //TODO replace dot \dot
     deadline = deadline || "";
     deadline = deadline.trim()
     if(deadline.match(/^([0-9]+).([0-9]+).([0-9]+) ([0-9]+):([0-9]+)$/)) {

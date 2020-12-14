@@ -88,8 +88,9 @@ export function restoreData(loginData, onSuccess) {
     return (dispatch) => {
         http("restore_data", "post",
             {login: loginData.loginInPair || null, email: loginData.emailInPair || null})
-            .then((user) => {
-                    alert(`Ваши данные\nlogin: ${user.login}\nemail: ${user.email}\npassword ${user.password}`);
+            .then(() => {
+                    alert("данные были отправленны на вашу почту");
+                    // alert(`Ваши данные\nlogin: ${user.login}\nemail: ${user.email}\npassword ${user.password}`);
                     onSuccess();
                 })
             .catch((json) => alert(json.error))
