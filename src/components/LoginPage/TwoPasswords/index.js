@@ -10,13 +10,13 @@ export default function TwoPasswords() {
     return (
         <div className={styles.style}>
         <textarea placeholder="пароль"
-                  className={input_style.style}
+                  className={`${styles.text} ${input_style.style}`}
                   onChange={(e) => {
                       store.dispatch(editPassword1(e.target.value))
                   }}
                   value={store.getState().password1 || ""}/>
         <textarea placeholder="повторите пароль"
-                  className={classNames(input_style.style,
+                  className={classNames(input_style.style, styles.text,
                       {[input_style.error]: (store.getState().password1 !== store.getState().password2)
                           && ((store.getState().password2 || "").trim() !== "")})}
                   onChange={(e) => {

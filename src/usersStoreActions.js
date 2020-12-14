@@ -19,7 +19,8 @@ export function logout(id) {
 
 export function userLoginAfterSignUp(userData) {
     return (dispatch) => {
-        http(`sign_in?username=${userData.id}&password=${userData.password}`, "post")
+        http(`sign_in?username=${userData.login};&password=${userData.password}`, "post",
+            {login: userData.login, password: userData.password})
             .then((json) => {dispatch(loadUser())})
             .catch((json) => alert(json.error))
     }
@@ -27,7 +28,8 @@ export function userLoginAfterSignUp(userData) {
 
 export function userSignIn(loginData) {
     return (dispatch) => {
-        http(`sign_in?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`, "post")
+        http(`sign_in?username=${loginData.loginInPair||""};${loginData.emailInPair||""}&password=${loginData.password}`,
+            "post", {login: loginData.loginInPair, email: loginData.emailInPair, password: loginData.password})
             .then((json) => {dispatch(loadUser())})
             .catch((json) => alert(json.error))
     }
@@ -55,12 +57,15 @@ function validatePassword(password1, password2) {
 export function userSignUp(loginData) {
     if(!validateLogin(loginData.login)) {
         alert("wrong user login")
+        return () => {};
     }
     if(!validateEmail(loginData.email)) {
         alert("wrong user email")
+        return () => {};
     }
     if(!validatePassword(loginData.password1, loginData.password2)) {
         alert("wrong user password")
+        return () => {};
     }
     return (dispatch) => {
         http("sign_up", "post",

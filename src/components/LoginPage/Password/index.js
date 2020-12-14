@@ -9,7 +9,7 @@ export default function Password() {
     return (
         <div className={styles.style}>
             <textarea placeholder="пароль"
-                          className={input_style.style}
+                          className={`${styles.text} ${input_style.style}`}
                           onChange={(e) => {
                               store.dispatch(editPassword(e.target.value))
                           }}
