@@ -1,4 +1,5 @@
 ## Терехов Николай Frontend
+![image](https://user-images.githubusercontent.com/45039069/119259160-a1af9900-bbd5-11eb-8f17-0d03ccafea37.png)
 
 ## P.S. в Firefox не должно работать, так как я использовал css свойство zoom которого там вроде нет.
 
